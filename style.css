@@ -1,0 +1,305 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-base-body: #ffffff;
+  --color-base-head: #065e7c;
+  --color-base-placeholder: rgba(255, 255, 255, 0.2);
+
+  --color-font-400-textos: #121214;
+  --color-font-600-placeholder: #fff;
+  --color-font-700-titulos: #202024;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-color: var(--color-base-body);
+  background-color: #202024;
+}
+
+.container {
+  margin: 0 auto;
+  width: 430px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.2rem 2.8rem;
+  max-width: 100%;
+  height: 7.2rem;
+  background-color: var(--color-base-head);
+}
+
+.espaco-pata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: #f4fcff;
+  border-radius: 50%;
+}
+
+.espaco-pata img {
+  padding: 8px;
+  /* position: absolute; tirei para ficar uma figura mais redonda*/
+  z-index: 1;
+}
+
+.avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+
+  border-radius: 999px;
+  background: url(<path-to-image>),
+    lightgray 0px -3.049px / 100% 149.817% no-repeat;
+}
+
+.input-wrapper label {
+  width: 1px; /* para melhor acessibilidade criamos um label, pois o placeholder nao é lido pelo navegador*/
+  height: 1px; /* sendo assim é necessario criar um label e esconde-lo em baixo do placeholder, para o navegador */
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 100%; /* 16px */
+}
+
+.input-wrapper input::placeholder {
+  color: #fff;
+  font-family: "Mulish", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.4rem;
+}
+
+h1,
+.posneg,
+main p {
+  padding: 0 2.2rem 0 2.2rem;
+}
+
+main h1 {
+  margin-top: 3.1rem;
+
+  color: var(--color-font-700-titulos);
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 3.8rem;
+}
+
+main p {
+  width: 382px;
+
+  color: var(--color-font-400-textos);
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.posneg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 3.1rem;
+  margin-top: 0.8rem;
+}
+
+#one,
+#two {
+  padding: 12px;
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: #065e7c;
+  border-radius: 50%;
+}
+
+.others h1 {
+  color: var(--color-font-700-titulos);
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 3.8rem;
+  margin-bottom: 3.2rem;
+}
+
+.fototexto {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  width: 38.2rem;
+  height: 8.4rem;
+  margin-bottom: 3.2rem;
+  padding: 0 2.2rem 0 2.2rem;
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+}
+
+.textos h2 {
+  color: var(--color-font-700-titulos);
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  line-height: 2.9rem;
+}
+
+.textos p {
+  color: var(--color-font-400-textos);
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  width: 21.5rem;
+}
+
+footer {
+  color: #fff;
+  font-family: "Mulish", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* -----------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1120px) {
+  body {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .head {
+    width: 100%;
+    
+  }
+
+  header form {
+    flex: 1;
+  }
+
+  .input-wrapper input{
+    width: 100%;
+  }
+
+  .display-flex {
+    display: flex;
+    gap: 8rem;
+    
+  }
+
+  main img {
+    width: 80rem;
+    height: 40rem;
+    margin-bottom: 3.2rem;
+    margin-top: 4.4rem;
+  }
+
+  .mais-uma {
+    display:flex;
+    align-items: center;
+    gap: 31.4rem;
+    margin-bottom: 3.2rem;
+    width: 80rem;
+    height: 4rem;
+  }
+
+  .mais-uma h1 {
+    color: var(--color-font-700-titulos);
+    font-family: "Mulish", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    line-height: 3.8rem;
+    padding: 0;
+  }
+
+  main p {
+    width: 80rem;
+    height: 36.4rem;
+
+    color: var(--color-font-400-textos);
+    font-family: "Mulish", sans-serif;
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 2.5rem;
+    padding: 0;
+    }
+
+    .others {
+      margin-top: 1rem;
+      
+    }
+    .others h1 {
+      padding: 0;
+    }
+ 
+    .fototexto {
+      padding: 0;
+      width: 43rem;
+      height: 8.4rem;
+      display: flex;
+      margin-bottom: 5rem;
+    }
+
+  }
+/*-----------------------------------------------------------------------------------*/
+
+header {
+  --startY: -100%;
+  animation: move .5s;
+}
+
+footer {
+  --startY: 100%;
+  animation: move .5s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+.fototexto img:hover {
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  transform: scale(1.1) rotate(-4deg) /* aumenta a escala da foto e desloca ela em graus  */
+}
